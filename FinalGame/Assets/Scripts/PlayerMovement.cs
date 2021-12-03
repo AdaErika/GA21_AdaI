@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     //direction
     float scaleX = 1;
     new Collider2D collider = null;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
+
         rb.velocity = Vector2.right * (Input.GetAxis("Horizontal") * speed) + Vector2.up * rb.velocity.y;
 
         if (Input.GetAxis("Horizontal") != 0)
